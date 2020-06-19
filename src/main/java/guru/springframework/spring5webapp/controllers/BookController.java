@@ -17,6 +17,10 @@ public class BookController {
     @RequestMapping("/books")
     public String getBooks(Model model){
         model.addAttribute("books", bookRepository.findAll());
+
+        //this "books/list" is showing where under templates and what file(template) to use
+        //where: books directory under resources/templates directory
+        //what: list.html
         return "books/list";
     }
 }
